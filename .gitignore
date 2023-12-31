@@ -8,3 +8,8 @@ htmlcov/
 docs/_build/
 dist/
 venv
+.env
+logs/*
+.python-version
+instance/*
+.webassets-cache

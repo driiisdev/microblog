@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import unittest
+import app
 from app import app, db
 from app.models import User, Post
 
@@ -7,11 +8,15 @@ from app.models import User, Post
 class UserModelCase(unittest.TestCase):
   def setUp(self):
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:''@localhost/microblog'
+    app.config['TESTING'] = True  # Set the app in testing mode
+    self.app_context = app.app_context()
+    self.app_context.push()
     db.create_all()
     
   def tearDown(self):
     db.session.remove()
     db.drop_all()
+    self.app_context.pop()
     
   def test_password_hashing(self):
     u = User(username='susan')

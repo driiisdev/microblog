@@ -1,6 +1,7 @@
 from flask import render_template
 from app import app
 from app.models import User
+from app.forms import EmptyForm
 from flask_login import  login_required
 
 
@@ -12,4 +13,5 @@ def user(username):
   {'author': user, 'body': 'Test post #1'},
   {'author': user, 'body': 'Test post #2'}
   ]
-  return render_template('user.html', user=user, posts=posts)
+  form = EmptyForm()
+  return render_template('user.html', user=user, posts=posts, form=form)
