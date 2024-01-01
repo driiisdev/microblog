@@ -18,4 +18,4 @@ def index():
   page = request.args.get('page', 1, type=int)
   posts = current_user.followed_posts().paginate(page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
   return render_template('index.html', title='Home', form=form,
-    posts=posts.items)
+    posts=posts)
