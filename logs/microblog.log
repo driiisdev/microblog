@@ -1,4 +1,4 @@
-2024-01-01 00:56:32,664 ERROR: Exception on /index [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+2024-01-20 02:50:41,377 ERROR: Exception on /index [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -11,9 +11,13 @@ Traceback (most recent call last):
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
   File "/home/driiisdev/Desktop/dev/microblog/app/routes/page.py", line 19, in index
-    posts = current_user.followed_posts().paginate(page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+    posts = current_user.followed_posts().paginate(
 TypeError: paginate() takes 1 positional argument but 4 were given
-2024-01-01 00:56:34,173 ERROR: Exception on /index [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+2024-01-20 02:50:50,223 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
+2024-01-20 03:07:35,641 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
+2024-01-20 03:40:39,183 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
+2024-01-20 03:40:51,171 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
+2024-01-20 03:42:35,488 ERROR: Exception on /user/eddie [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -25,10 +29,10 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/driiisdev/Desktop/dev/microblog/app/routes/page.py", line 19, in index
-    posts = current_user.followed_posts().paginate(page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
-TypeError: paginate() takes 1 positional argument but 4 were given
-2024-01-01 00:56:49,919 ERROR: Exception on /index [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
+  File "/home/driiisdev/Desktop/dev/microblog/app/routes/users.py", line 13, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+NameError: name 'Post' is not defined
+2024-01-20 03:43:00,561 ERROR: Exception on /user/eddie [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -40,9 +44,7 @@ Traceback (most recent call last):
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
   File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
     return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/driiisdev/Desktop/dev/microblog/app/routes/page.py", line 19, in index
-    posts = current_user.followed_posts().paginate(page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
-TypeError: paginate() takes 1 positional argument but 4 were given
-2024-01-01 00:57:05,803 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-01 17:11:04,623 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-01 17:39:15,915 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
+  File "/home/driiisdev/Desktop/dev/microblog/app/routes/users.py", line 13, in user
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+NameError: name 'Post' is not defined
+2024-01-20 03:43:06,792 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
