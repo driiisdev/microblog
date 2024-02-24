@@ -1,5 +1,5 @@
 from flask import request, render_template, flash, redirect, url_for
-from werkzeug.urls import url_parse
+from urllib.parse import urlparse
 from app import app
 from app.forms import LoginForm
 from app.models import User
