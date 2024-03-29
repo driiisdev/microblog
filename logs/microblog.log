@@ -1,87 +1,4 @@
-2024-01-20 02:50:41,377 ERROR: Exception on /index [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/driiisdev/Desktop/dev/microblog/app/routes/page.py", line 19, in index
-    posts = current_user.followed_posts().paginate(
-TypeError: paginate() takes 1 positional argument but 4 were given
-2024-01-20 02:50:50,223 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-20 03:07:35,641 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-20 03:40:39,183 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-20 03:40:51,171 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-01-20 03:42:35,488 ERROR: Exception on /user/eddie [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/driiisdev/Desktop/dev/microblog/app/routes/users.py", line 13, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-NameError: name 'Post' is not defined
-2024-01-20 03:43:00,561 ERROR: Exception on /user/eddie [GET] [in /home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py:1414]
-Traceback (most recent call last):
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1469, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/driiisdev/Desktop/dev/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/driiisdev/Desktop/dev/microblog/app/routes/users.py", line 13, in user
-    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
-NameError: name 'Post' is not defined
-2024-01-20 03:43:06,792 INFO: Microblog startup [in /home/driiisdev/Desktop/dev/microblog/app/__init__.py:36]
-2024-02-24 03:43:28,273 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:45:20,205 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:46:29,963 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:47:06,458 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:47:32,823 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:47:48,993 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:48:05,095 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:48:21,306 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:48:27,186 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:51:00,394 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:51:07,279 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:51:15,252 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:52:51,507 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:55:08,524 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:55:30,089 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:55:46,739 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:56:04,026 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:57:12,313 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:57:23,903 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:57:32,355 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 03:59:44,872 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:00:54,199 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:02:26,553 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:04:27,849 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:05:22,548 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:06:27,149 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:36]
-2024-02-24 04:08:14,172 ERROR: Exception on /register [POST] [in /home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py:828]
-Traceback (most recent call last):
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/validators.py", line 401, in __call__
-    import email_validator
-ModuleNotFoundError: No module named 'email_validator'
-
-The above exception was the direct cause of the following exception:
-
+2024-03-29 15:30:36,485 ERROR: Exception on /login [GET] [in /home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py:828]
 Traceback (most recent call last):
   File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1463, in wsgi_app
     response = self.full_dispatch_request()
@@ -91,18 +8,61 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 855, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-  File "/home/driiisdev/dev/microblog/app/routes/register.py", line 13, in register
-    if form.validate_on_submit():
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask_wtf/form.py", line 86, in validate_on_submit
-    return self.is_submitted() and self.validate(extra_validators=extra_validators)
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/form.py", line 329, in validate
-    return super().validate(extra)
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/form.py", line 146, in validate
-    if not field.validate(self, extra):
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/fields/core.py", line 246, in validate
-    stop_validation = self._run_validation_chain(form, chain)
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/fields/core.py", line 266, in _run_validation_chain
-    validator(form, self)
-  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/wtforms/validators.py", line 403, in __call__
-    raise Exception(
-Exception: Install 'email_validator' for email validation support.
+  File "/home/driiisdev/dev/microblog/app/routes/login.py", line 23, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/driiisdev/dev/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/driiisdev/dev/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/driiisdev/dev/microblog/app/templates/login.html", line 24, in block 'content'
+    Forgot Your Password? <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+2024-03-29 15:30:38,497 ERROR: Exception on /login [GET] [in /home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/driiisdev/dev/microblog/app/routes/login.py", line 23, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/driiisdev/dev/microblog/app/templates/login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/home/driiisdev/dev/microblog/app/templates/base.html", line 30, in top-level template code
+    {% block content %}{% endblock %}
+  File "/home/driiisdev/dev/microblog/app/templates/login.html", line 24, in block 'content'
+    Forgot Your Password? <a href="{{ url_for('reset_password_request') }}">Click to Reset It</a>
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1074, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1063, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/driiisdev/dev/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 919, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
+2024-03-29 15:31:15,289 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-29 15:32:47,821 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]

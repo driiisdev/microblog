@@ -16,3 +16,4 @@ from app.routes.users import user
 from app.routes.editProfile import edit_profile
 from app.routes.followUnfollow import follow, unfollow
 from app.routes.explore import explore
+from app.routes.resetPasswordRequest import reset_password_request
