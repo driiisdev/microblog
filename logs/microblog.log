@@ -66,3 +66,6 @@ Traceback (most recent call last):
 werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_password_request'. Did you mean 'edit_profile' instead?
 2024-03-29 15:31:15,289 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
 2024-03-29 15:32:47,821 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-29 17:00:35,564 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-29 17:40:19,216 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-29 17:43:09,951 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
