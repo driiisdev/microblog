@@ -69,3 +69,5 @@ werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'reset_
 2024-03-29 17:00:35,564 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
 2024-03-29 17:40:19,216 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
 2024-03-29 17:43:09,951 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-30 17:09:45,656 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:38]
+2024-03-30 17:39:14,459 INFO: Microblog startup [in /home/driiisdev/dev/microblog/app/__init__.py:40]
